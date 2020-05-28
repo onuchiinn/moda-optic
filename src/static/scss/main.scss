@@ -37,12 +37,18 @@ body {
         list-style-type: none;
         color: #828282;
     }
+    a {
+        cursor: pointer;
+    }
     ul {
         margin-block-start: 0px;
         margin-block-end: 0px;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
         padding-inline-start: 0px;
+    }
+    div {
+        cursor: default;
     }
 }
 
@@ -55,8 +61,7 @@ body {
     margin-right: auto;
     padding: 0 15px;
 }
-.header__inner {
-}
+
 .up-menu {
     display: flex;
     justify-content: space-between;
@@ -139,13 +144,15 @@ body {
     align-items: center;
     margin-top: 46px;
     width: 100%;
-    flex-wrap: wrap;
+
     a {
         color: #333333;
     }
 }
 
 .main-menu__logo {
+    max-width: 100%;
+    height: auto;
 }
 
 .main-menu__number {
@@ -153,6 +160,7 @@ body {
     font-size: 24px;
     line-height: 29px;
     color: #333333;
+    cursor: default;
 }
 .main-menu__search {
     flex-grow: 1;
@@ -192,6 +200,7 @@ body {
     display: flex;
     align-items: center;
     padding-left: 20px;
+    color: #4f4f4f;
     img {
         padding-right: 12px;
     }
@@ -204,8 +213,7 @@ body {
     line-height: 19px;
     color: #333333;
 }
-.menu__btn {
-}
+
 .menu__list {
     display: flex;
     justify-content: space-between;
@@ -238,6 +246,7 @@ body {
     font-size: 0px;
     width: 10px;
     height: 27px;
+    cursor: pointer;
 }
 .slick-next {
     z-index: 2;
@@ -250,6 +259,7 @@ body {
     font-size: 0px;
     width: 10px;
     height: 27px;
+    cursor: pointer;
 }
 .slick-dots {
     position: absolute;
@@ -257,12 +267,14 @@ body {
     left: 90px;
     display: flex;
     font-size: 0px;
+    
     button {
         height: 20px;
         width: 20px;
         border-radius: 10px;
         border: 1px solid #ffffff;
         background: none;
+        cursor: pointer;
     }
     li + li {
         margin-left: 7px;
@@ -271,8 +283,7 @@ body {
 .slick-active {
     background: #ffffff;
     border-radius: 10px;
-}
-.top__slider {
+    
 }
 .slider__element {
     display: flex;
@@ -313,6 +324,7 @@ body {
     text-transform: uppercase;
     transition: 0.5s;
     font-weight: 400;
+    cursor: pointer;
     &:hover {
         color: #282696;
         background-color: #fff;
@@ -351,6 +363,7 @@ body {
     font-size: 30px;
     line-height: 36px;
     text-align: left;
+    cursor: default;
 }
 .description__subtitle {
     padding-top: 39px;
@@ -359,6 +372,7 @@ body {
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 0.05em;
+    cursor: default;
 }
 .description__buttonGlasses {
     border: 1px solid #ffffff;
@@ -372,6 +386,7 @@ body {
     text-transform: uppercase;
     transition: 0.5s;
     font-weight: 400;
+    cursor: pointer;
     &:hover {
         color: #282696;
         background-color: #fff;
@@ -391,7 +406,6 @@ body {
 }
 .goods__inner {
     position: relative;
-    
 }
 
 .goods__title {
@@ -407,14 +421,13 @@ body {
 .goods__cards {
     margin: 0 auto;
     width: 100%;
-    
 }
 .cards__card {
     margin: 1px;
     padding: 15px;
     max-width: 23.4%;
     max-height: 100%;
-        &:hover {
+    &:hover {
         box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
     }
 }
@@ -533,11 +546,11 @@ body {
 .promo {
     margin-bottom: 100px;
 }
-.promo__inner {
-}
+
 .promo__text {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 40px;
 }
 .promo__title {
@@ -602,9 +615,6 @@ body {
     text-transform: uppercase;
     color: #ffffff;
 }
-
-.about {
-}
 .about__inner {
     display: flex;
     min-height: 580px;
@@ -617,7 +627,6 @@ body {
     color: #fff;
     width: 50%;
     cursor: url("../img/about-pointer.png"), pointer;
-    
 }
 .about__title {
     margin-top: 60px;
@@ -665,8 +674,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.footer__menu__logo {
-}
+
 .footer__menu__list {
     width: 1040px;
     display: flex;
@@ -746,8 +754,6 @@ body {
     li + li {
         margin-left: 12px;
     }
-    li {
-    }
 }
 .contacts__subscribe {
     max-width: 293px;
@@ -800,6 +806,7 @@ body {
 
 .footer__down {
     margin-top: 33px;
+    margin-bottom: 97px;
     display: flex;
     justify-content: space-between;
 }
@@ -831,13 +838,9 @@ body {
     }
 }
 
-
 @media (max-width: 1315px) {
     .footer__menu__logo {
         margin-right: 30px;
-    }
-    .footer__menu__list {
-
     }
     .main-menu__search {
         flex-grow: 0;
@@ -850,7 +853,7 @@ body {
         width: auto;
         flex-wrap: wrap;
     }
-    
+
     .main-menu__number {
         display: none;
     }
@@ -866,9 +869,434 @@ body {
     .menu__list {
         justify-content: flex-end;
         flex-wrap: wrap;
-        li+li {
+        li + li {
             margin-left: 15px;
         }
     }
+    .about__story {
+        p:nth-last-of-type(1) {
+            display: none;
+        }
+    }
+    .block__sale {
+        padding-right: 50px;
+        height: 160px;
+    }
+}
 
+@media (max-width: 810px) {
+    .contacts__company {
+        display: none;
+    }
+    .footer__down__right {
+        display: none;
+    }
+    .footer__contacts {
+        justify-content: space-around;
+    }
+    .slider__picture {
+        display: none;
+    }
+    .slider__info {
+        width: 100%;
+        padding-right: 90px;
+    }
+    .slick-dots {
+        bottom: 50px;
+    }
+    .block__sale {
+        height: 180px;
+    }
+}
+
+@media (max-width: 745px) {
+    .about__img {
+        display: none;
+    }
+    .about__text {
+        width: 100%;
+    }
+    .about__inner {
+        max-height: 420px;
+    }
+    .profile__auth {
+        a {
+            display: none;
+        }
+    }
+    .profile__cart {
+        a {
+            display: none;
+        }
+    }
+    .up-menu_left {
+        display: none;
+    }
+    .up-menu {
+        justify-content: flex-end;
+    }
+    .card__inner {
+        text-align: left;
+    }
+    .more__price {
+        margin-right: 20px;
+    }
+    .description__subtitle {
+        padding-top: 15px;
+        padding-bottom: 18px;
+    }
+}
+
+@media (max-width: 615px) {
+    .info__subtitle {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .info__title {
+        margin-top: 30px;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .glasses__description {
+        padding-left: 30px;
+    }
+    .slider__info {
+        background-size: 350%;
+    }
+    .slick-dots {
+        button {
+            display: none;
+        }
+    }
+    .slick-prev {
+        top: 60%;
+        background-size: 50%;
+    }
+    .slick-next {
+        top: 60%;
+        background-size: 50%;
+    }
+    .card__picture {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .card__title {
+        text-align: center;
+    }
+    .card__more {
+        justify-content: center;
+    }
+    .good-before {
+        left: 25px;
+        top: 40%;
+    }
+    .good-after {
+        right: 25px;
+        top: 40%;
+    }
+    .blocks_block:nth-of-type(2) {
+        display: none;
+    }
+    .blocks_block {
+        width: 100%;
+    }
+    .block__sale {
+        height: 35%;
+    }
+    .contacts__subscribe {
+        display: none;
+    }
+    .footer__menu {
+        align-items: center;
+        flex-direction: column;
+    }
+    .footer__menu__list {
+        margin-top: 53px;
+        flex-direction: column;
+
+        li {
+            padding-bottom: 12px;
+        }
+        li + li {
+            margin-left: 0px;
+        }
+    }
+    .network__title {
+        display: none;
+    }
+    .footer__contacts {
+        margin-top: 0px;
+        justify-content: center;
+    }
+    .network__mail {
+        text-align: center;
+    }
+    .network__icons {
+        justify-content: center;
+        span {
+            display: none;
+        }
+    }
+    .footer__down__left {
+        text-align: center;
+    }
+    .goods {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .glasses {
+        margin-top: 21px;
+    }
+
+    .menu__btn {
+        width: 20px;
+        height: 12px;
+        position: relative;
+        span {
+            width: 50%;
+            height: 1.71px;
+            background-color: #09abe4;
+            top: 5px;
+            position: absolute;
+            border-radius: 2px;
+        }
+    }
+    .menu__btn::after,
+    .menu__btn::before {
+        content: "";
+        width: 100%;
+        height: 1.71px;
+        background-color: #09abe4;
+        position: absolute;
+        border-radius: 2px;
+    }
+    .menu__btn::after {
+        top: 0;
+    }
+    .menu__btn::before {
+        bottom: 0;
+    }
+
+    .up-menu {
+        display: none;
+    }
+
+    .main-menu {
+        margin-top: 24px;
+        position: relative;
+    }
+
+    .main-menu__search {
+        position: absolute;
+        width: 100%;
+        max-width: 97%;
+        left: -15px;
+        bottom: -35px;
+        z-index: 2;
+    }
+    .main-menu a {
+        margin-left: 45px;
+        margin-right: 150px;
+        min-width: 101px;
+    }
+    .header__inner {
+        position: relative;
+    }
+    .menu {
+        position: absolute;
+        left: -10px;
+        top: 25px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        z-index: 2;
+        width: 100%;
+        text-align: center;
+    }
+    .menu__list {
+        display: none;
+        width: 104%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        z-index: 5;
+        margin-top: 50px;
+        li + li {
+            margin-top: 15px;
+        }
+    }
+    .slider__info {
+        background-size: cover;
+        margin-top: 60px;
+    }
+    .goods__title {
+        margin-bottom: 14px;
+        margin-left: 0px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 600;
+    }
+    .cards__card {
+        margin: 0px;
+        padding: 0px;
+    }
+    .footer {
+        margin-top: 70px;
+    }
+    .footer__menu__logo {
+        margin-right: 0;
+        min-width: 145px;
+    }
+    .slider__element {
+        display: flex;
+        min-height: 100%;
+    }
+    .top__inner {
+        height: 100%;
+    }
+    .info__buttonMore {
+        margin-bottom: 25px;
+    }
+
+    .hidden {
+        display: flex;
+    }
+    .glasses__inner {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+    .description__buttonGlasses {
+        margin-bottom: 26px;
+    }
+}
+
+@media (max-width: 510px) {
+    .profile__auth {
+        padding-right: 0px;
+        border-right: 0px;
+    }
+    .menu {
+        top: 10px;
+    }
+    .blocks_block {
+        height: 290px;
+    }
+    .sale__title {
+        margin-top: 10px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .sale__subtitle {
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 8px;
+    }
+    .sale__link {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .block__sale {
+        padding-left: 15px;
+        padding-right: 32px;
+        padding-bottom: 10px;
+        height: 25%;
+    }
+    .promo {
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width: 420px) {
+    .profile__auth {
+        padding-right: 0px;
+        border-right: 0px;
+    }
+    .main-menu a {
+        margin-left: 30px;
+        margin-right: 75px;
+        min-width: 101px;
+    }
+    .profile__auth img {
+        padding-right: 0px;
+    }
+    .cartCount {
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .slider__info {
+        padding: 0 30px;
+    }
+    .slick-prev {
+        top: 60%;
+        background-size: 35%;
+        left: 8px;
+    }
+    .slick-next {
+        top: 60%;
+        background-size: 35%;
+        right: 8px;
+    }
+    .about__inner {
+        max-height: 100%;
+    }
+    .footer__down__left p {
+        display: none;
+    }
+    .footer__down {
+        margin-bottom: 50px;
+    }
+    .footer__menu__list {
+        flex-wrap: nowrap;
+        width: 100%;
+        li {
+            width: 100%;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f2f2f2;
+            text-align: center;
+        }
+        li + li {
+            margin-top: 12px;
+        }
+    }
+    .network__mail {
+        margin: 15px auto 30px;
+    }
+    .footer__down {
+        margin-top: 14px;
+    }
+    .network__icons {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #f2f2f2;
+        width: 100%;
+    }
+    .contacts__network {
+        width: 100%;
+    }
+    .network__number {
+        text-align: center;
+    }
+    .about__story {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .about__title {
+        margin-top: 25px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .card__picture {
+        height: 307px;
+    }
+    .card__picture img {
+        width: 220px;
+    }
+    .good-before {
+        left: 5px;
+        top: 35%;
+    }
+    .good-after {
+        right: 5px;
+        top: 35%;
+    }
 }

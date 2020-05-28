@@ -15,7 +15,7 @@ module.exports = function () {
             .pipe($.gp.babel({
                 presets: ['@babel/preset-env']
             }))
-            // .pipe($.gp.uglify())
+            .pipe($.gp.uglify())
             .pipe($.gulp.dest('build/static/js/'))
             .pipe($.bs.reload({
                 stream: true
