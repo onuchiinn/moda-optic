@@ -1,3 +1,5 @@
+"use strict"
+
 $('.top__inner').slick({
   infinite: true,
   dots: true,
@@ -56,8 +58,6 @@ goods.addEventListener('click', function (event) {
   changeCart();
 });
 
-menuBtn.addEventListener('click', function (event) {
-  menuList.classList.toggle('hidden');
-});
+menuBtn.addEventListener('click', () => menuList.classList.toggle('hidden'));
 
 changeCart();
